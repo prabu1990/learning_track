@@ -2,3 +2,8 @@ dependencies:
   override:
     - rvm use 1.9.3-p547
     - bundle install
+test:
+  post:
+    - nohup bash -c "bundle exec rails server &" 
+    - sleep 30
+    - bundle exec rspec selenium/*.rb --colour 
