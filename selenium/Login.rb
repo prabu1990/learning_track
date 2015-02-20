@@ -17,10 +17,10 @@ class Email
       @instance.profile_page.click
       # @instance.mouse_hover_more
       # @instance.click_more_places.click
-      # @instance.post_status
-      # @instance.post_button.click
-      # @instance.settings.click
-      # @instance.click_logout.click
+      @instance.post_status
+      @instance.post_button.click
+      @instance.settings.click
+      @instance.click_logout.click
        end
 
        after(:all) do
