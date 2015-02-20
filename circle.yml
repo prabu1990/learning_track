@@ -1,4 +1,4 @@
 dependencies:
   override:
     - rvm use 1.9.3-p547
-    - bundle install
+    
