@@ -8,6 +8,10 @@ class Email
 		  @instance.input_yml
 		end
 
+    after(:all) do
+      @instance.close_browser  
+    end
+
       it " should include fields change" do
     	@instance.browser_setup
     	@instance.get_url
@@ -23,8 +27,5 @@ class Email
       @instance.click_logout.click
        end
 
-       after(:all) do
-       		@instance.close_browser  
-       end
 	end
 end
